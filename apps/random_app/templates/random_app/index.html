@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Random Word Generator</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'random_app/css/index.css' %}">
+  </head>
+  <body>
+      <h3>Random Word Generator (attempt: #{{ request.session.count }})</h3>
+      <div id="box">
+          <p>{{request.session.word}}</p>
+      </div>
+
+      <br><br>
+      <a href="random_word"><button type="button" class="butn">Generate</button></a>
+
+      <br><br>
+      <a href="clear_session"><button type = "button" class = "reset">Reset</button></a>
+
+  
+  </body>
+</html>
